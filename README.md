@@ -10,6 +10,7 @@ This repository is a compiled assets distribution package. It holds the CSS bund
 - [How it works](#how-it-works)
 - [Installation](#installation)
 - [Versioning / Tags](#versioning--tags)
+- [Updating the submodule](#updating-the-submodule)
 - [Related repositories](#related-repositories)
 - [License](#license)
 
@@ -46,6 +47,8 @@ poc-working-with-git-submodules
 
 To add this repository as a git submodule in a consuming project:
 
+> **Branch note:** `develop` is the active development branch. `main` is the stable branch intended for consumption by other projects — always use `-b main` when adding this submodule.
+
 ```bash
 git submodule add -b main git@github.com:adrianoenache/poc-working-with-git-submodules-packages-for-distribution.git submodules-git/ui-kit-packages
 ```
@@ -59,9 +62,15 @@ After running the command, a `.gitmodules` file is created (or updated) in the r
     branch = main
 ```
 
+When cloning a project that already has this submodule configured, initialize and fetch it with:
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Versioning / Tags
 
-This repository uses tags to allow consuming projects to lock on a specific released version of the CSS.
+This repository uses tags to allow consuming projects to lock on a specific released version of the assets.
 
 To lock a consuming project to a specific tag, navigate into the submodule directory and check out the desired tag:
 
@@ -80,6 +89,26 @@ git commit -m "Lock the git submodule on the tag v0.0.1-alpha"
 
 git push origin main
 ```
+
+## Updating the submodule
+
+**Update to the latest commit on the tracked branch (`main`):**
+
+```bash
+git fetch --all --prune
+
+git pull origin main
+
+git submodule update --remote --recursive submodules-git/ui-kit-packages
+
+git add submodules-git/ui-kit-packages
+
+git commit -m "Update ui-kit-packages submodule to latest main"
+
+git push origin main
+```
+
+**Update to a specific tag** — follow the same steps described in [Versioning / Tags](#versioning--tags).
 
 ## Related repositories
 
