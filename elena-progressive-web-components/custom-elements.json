@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/elena-progressive-web-components.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DsText",
+          "declaration": {
+            "name": "default",
+            "module": "./components/ds-text/ds-text"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/ds-text/ds-text.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "the description of the component goes here.",
+          "name": "DsText",
+          "cssProperties": [
+            {
+              "description": "Overrides the default text color.",
+              "name": "--ds-text-text"
+            },
+            {
+              "description": "Overrides the default background color.",
+              "name": "--ds-text-bg"
+            },
+            {
+              "description": "Overrides the default font family.",
+              "name": "--ds-text-font"
+            },
+            {
+              "description": "Overrides the default font size.",
+              "name": "--ds-text-size"
+            },
+            {
+              "description": "Overrides the font weight for paragraphs.",
+              "name": "--ds-text-weight"
+            },
+            {
+              "description": "Overrides the font weight for h1 and h2 (default: 700).",
+              "name": "--ds-text-weight-strong"
+            },
+            {
+              "description": "Overrides the font weight for h3 through h6 (default: 600).",
+              "name": "--ds-text-weight-medium"
+            },
+            {
+              "description": "Overrides the default line height for paragraphs.",
+              "name": "--ds-text-line-height"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "tagName",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "\"ds-text\""
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[\"variant\", \"tag\"]"
+            },
+            {
+              "kind": "field",
+              "name": "validTags",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[\"div\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"p\", \"span\"]"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"danger\""
+              },
+              "default": "\"default\"",
+              "description": "the style variant of the component.",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "tag",
+              "type": {
+                "text": "\"div\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\" | \"span\""
+              },
+              "default": "\"div\"",
+              "description": "the HTML tag used to render the inner element.",
+              "attribute": "tag"
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "description": "The text content of the element, captured from light DOM before the first render.",
+              "attribute": "text"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "fieldName": "variant",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"danger\""
+              },
+              "default": "\"default\"",
+              "description": "the style variant of the component."
+            },
+            {
+              "name": "tag",
+              "fieldName": "tag",
+              "type": {
+                "text": "\"div\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\" | \"span\""
+              },
+              "default": "\"div\"",
+              "description": "the HTML tag used to render the inner element."
+            },
+            {
+              "name": "text",
+              "fieldName": "text",
+              "type": {
+                "text": "string"
+              },
+              "description": "The text content of the element, captured from light DOM before the first render."
+            }
+          ],
+          "mixins": [
+            {
+              "name": "Elena",
+              "package": "@elenajs/core"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "ds-text",
+          "status": "alpha",
+          "displayName": "DsText",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "DsText",
+            "module": "src/components/ds-text/ds-text.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ds-text",
+          "declaration": {
+            "name": "DsText",
+            "module": "src/components/ds-text/ds-text.js"
+          }
+        }
+      ]
+    }
+  ]
+}
