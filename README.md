@@ -13,6 +13,7 @@ This repository is a compiled assets distribution package. It holds the CSS bund
 - [Updating the submodule](#updating-the-submodule)
 - [Related repositories](#related-repositories)
 - [License](#license)
+- [References](#references)
 
 ## Project structure
 
@@ -127,3 +128,9 @@ git push origin main
 ## License
 
 [MIT](LICENSE)
+
+## References
+
+- [Git Tools Submodules - git-scm](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [Git submodules - Atlassian](https://www.atlassian.com/br/git/tutorials/git-submodule)
+- [Working with submodules](https://github.blog/open-source/git/working-with-submodules/)
